@@ -20,10 +20,8 @@ class Task:
             print("You are having no task to remove, Please add some first..!!")
         else:   
             print("You have tasks: ")
-            taskNo = 1
-            for task in tasks:
-                print(f"Task{taskNo} => Title : {task.title} - Status : {task.status}")
-                taskNo += 1
+            for index, task in enumerate(tasks):
+                print(f"Task{index} => Title : {task.title} - Status : {task.status}")
             
             isValidTaskNo = False
             while not isValidTaskNo:
@@ -51,10 +49,8 @@ class Task:
             print("You are having no task todo..!!")
         else:
             print("You have todo tasks:")
-            taskNo = 1
-            for task in tasks:
-                print(f"Task{taskNo} => [ Title : {task.title}\nDescription : {task.description}\nStatus : {task.status}\n]")
-                taskNo += 1
+            for index, task in enumerate(tasks):
+                print(f"Task{index} => [ Title : {task.title}\nDescription : {task.description}\nStatus : {task.status}\n]")
         input("Press Enter key to continue...")
         
     def updateTask(self):
@@ -95,10 +91,8 @@ class Task:
         if len(tasks) == 0:
             print("Currently you are not having any task..!!")
         else:
-            taskNo = 1
-            for task in tasks:
-                print(f"Task{taskNo} => Title : {task.title} - Status : {task.status}")
-                taskNo += 1
+            for index, task in enumerate(tasks):
+                print(f"Task{index} => Title : {task.title} - Status : {task.status}")
                 
             isValidTaskNo = False
             while not isValidTaskNo: 
